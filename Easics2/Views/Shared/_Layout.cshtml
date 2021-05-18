@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title downloading RAM....</title>
+    @Styles.Render("~/Content/css")
+    <!--Sagt med få ord henter den vores css page. Sagt med flere ord laver den en bundle.add som tilføger flere bundles til programmet. Dette er en process for at optimere load tiden
+    og bilver ofte referet til som "Bundling and Minification" Referer til "https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification" for mere infomation-->
+
+    <script defer src="~/Scripts/Main.js"></script> <!--defer siger til browseren at den skal vente til at alt er færdig med at parse, før scriptet er eksekveret.-->
+    <!--Starter jquery og ajax-->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+<body>
+    <div class="container body-content">
+        <!--RenderBody tager et child viev og placere det her.-->
+        @RenderBody()
+    </div>
+
+    <!--RenderSection vil køre den kode der står under, så hvis man har en footer vil den kører koden der stod i den. Dog kan man se at vi har scripts, og et parameter der hedder "required",
+        som er sat til false. At det siger er bare at det er en mulighed at kører scripts på det tidpunkt i koden-->
+    @RenderSection("scripts", required: false)
+
+</body>
+        </html>

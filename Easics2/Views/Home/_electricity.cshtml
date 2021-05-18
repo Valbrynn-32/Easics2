@@ -1,0 +1,27 @@
+﻿@model IEnumerable<string>
+<script defer>
+    function addNewEvent() {
+        document.getElementById("Voltage").addEventListener("click", () => {
+            GetParSub("voltage");
+        });
+
+        document.getElementById("Current").addEventListener("click", () => {
+            GetParSub("current");
+        });
+
+        document.getElementById("Power").addEventListener("click", () => {
+            GetParSub("power");
+        });
+    }
+    addNewEvent()
+</script>
+
+<div>
+
+    @foreach (string str in Model)
+    {
+        <button class="bUnder" id="@str" type="button" onclick="">@str</button>
+    }
+
+
+</div>

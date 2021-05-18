@@ -1,0 +1,77 @@
+﻿body {
+    max-height: 100%;
+    font: Arial Black;
+    font-size: 15px;
+    background-color: antiquewhite;
+    width: 100%;
+    margin: 2px;
+    border: 2px;
+    padding: 4px;
+    flex-flow: column;
+    display: flex;
+}
+.Intro {
+    max-height: 940px;
+    float: left;
+    max-width: 21%;
+    overflow: hidden;
+}
+
+.TheoryOver {
+    height: 850px;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+}
+
+.bSeleceted {
+    background-color: antiquewhite;
+    border-color: white;
+    outline: none;
+    width: 100%;
+    height: 8.25%;
+}
+.In2 {
+    max-height: 1080px;
+    max-width: 78%;
+    margin-left: 22%;
+    position: relative;
+}
+
+.Calc {
+    height: 800px;
+    position: relative;
+}
+
+.TheorySub{
+    height: 100px;
+}
+
+.Calc, .TheorySub {
+    margin-right: 6px;
+    background-color: white;
+    overflow: hidden;
+    margin: 14px;
+}
+
+.bContainer {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bUnder {
+    background-color: antiquewhite;
+    border-color: white;
+    outline: none;
+    width: 5%;
+    height: 10%;
+}
+
+.calcMain {
+    background-color: antiquewhite;
+    border-color: white;
+    outline: none;
+}
+

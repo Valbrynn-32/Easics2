@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+<script defer>
+    function addNewEvent() {
+        document.getElementById("Force").addEventListener("click", () => {
+            GetParSub("force");
+        });
+
+        document.getElementById("2nd law").addEventListener("click", () => {
+            GetParSub("ndlaw");
+        });
+    }
+    addNewEvent()
+</script>
+<div>
+    @foreach (string str in Model)
+    {
+        <button class="bUnder" id="@str" type="button" onclick="">@str</button>
+    }
+</div>

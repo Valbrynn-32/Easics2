@@ -1,0 +1,10 @@
+﻿@model IEnumerable<string>
+
+<div>
+    <!--Her tager jeg model og bruger den til at fører en liste igennem. Listen kommer fra controllerens partial view. Hvorefter den generare et knap element i html med den rigtige værdi, heraf den id og innerHTML
+    Dette sker i flere partialViews.-->
+    @foreach (string str in Model)
+    {
+        <button class="bSeleceted" id="@str" type="button" >@str</button>
+    }
+</div>
